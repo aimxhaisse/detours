@@ -1,4 +1,9 @@
 // Ran.
+//
+// A theme inspired by Curtana.
+//
+// This is a light-ish version adapted for my needs, it doesn't
+// cover the full spectrum of features Curtana does.
 
 @import "reset";
 
@@ -8,9 +13,16 @@ $color-light-bg: #343131;
 $color-text: #ffe7e5;
 $color-text-hl: #ff4238;
 
+// Breakpoints.
+$breakpoint-lg: 1600px;
+$breakpoint-md: 1080px;
+$breakpoint-sm: 640px;
+$breakpoint-xs: 400px;
+
 // Internal variables.
 $font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI", sans-serif;
 $font-size: 1.6vw;
+$space: 24vw;
 
 // Common.
 html {
@@ -23,29 +35,33 @@ body {
     line-height: 1.5;
     background-color: $color-dark-bg;
     color: $color-text;
+    padding: 0 $space 0 $space;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: $breakpoint-md) {
     body {
 	font-size: $font-size * 1.4;
+	padding: 0 $space * 0.3 0 $space * 0.3;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: $breakpoint-sm) {
     body {
 	font-size: $font-size * 2.4;
+	padding: 0 $space * 0.15 0 $space * 0.15;
     }
 }
     
-@media (max-width: 400px) {
+@media (max-width: $breakpoint-xs) {
     body {
 	font-size: $font-size * 3.2;
+	padding: 0 $space * 0 0 $space * 0;
     }
 }
 
-// Header.
+// Navigation.
 nav {
-    padding: 0.75vmax;
+    padding: 0.75vmax 0 0.75vmax 0;
 
     ul {
 	li {
@@ -54,7 +70,7 @@ nav {
 	    line-height: 2;
 	    font-weight: 700;
 	    text-transform: uppercase;
-	    padding: .5em 1.4vmax;
+	    padding: .5em 1.4vmax 0 0;
 	}
     }
 }
@@ -63,4 +79,8 @@ nav {
 
 header {
     background-color: $color-light-bg;
+}
+
+#content {
+
 }
