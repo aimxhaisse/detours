@@ -1,6 +1,6 @@
 ---
-title: "Level 8"
-draft: true
+title: Level 8
+layout: single
 ---
 
 # Level 8

@@ -1,4 +1,30 @@
-baseURL = "http://example.org/"
+baseURL = "https://detours.sbrk.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Détours by Sébastien Rannou"
 theme = "ran"
+
+# Menu.
+sectionPagesMenu = "navigation"
+
+[menu]
+
+  [[menu.navigation]]
+    identifier = "detours"
+    name = "Détours"
+    title = "Détours"
+    url = "/"
+    weight = 1
+
+  [[menu.navigation]]
+    identifier = "exhibitions"
+    name = "Exhibitions"
+    title = "Exhibitions"
+    url = "/exhibitions/"
+    weight = 2
+
+  [[menu.navigation]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about/"
+    weight = 3

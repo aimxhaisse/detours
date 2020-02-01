@@ -59,6 +59,15 @@ body {
     }
 }
 
+a {
+    text-decoration: none;
+    color: $color-text;
+}
+
+a:hover {
+    color: $color-text-hl;
+}
+
 // Navigation.
 nav {
     padding: 0.75vmax 0 0.75vmax 0;
@@ -71,6 +80,10 @@ nav {
 	    font-weight: 700;
 	    text-transform: uppercase;
 	    padding: .5em 1.4vmax 0 0;
+
+	    .active{
+		color: $color-text-hl;
+	    }
 	}
     }
 }
