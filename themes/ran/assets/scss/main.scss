@@ -2,6 +2,12 @@
 
 @import "reset";
 
+// Colors.
+$color-dark-bg: #242323;
+$color-light-bg: #343131;
+$color-text: #ffe7e5;
+$color-text-hl: #ff4238;
+
 // Internal variables.
 $font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI", sans-serif;
 $font-size: 1.6vw;
@@ -15,6 +21,8 @@ body {
     font-family: $font-family;
     font-size: $font-size;
     line-height: 1.5;
+    background-color: $color-dark-bg;
+    color: $color-text;
 }
 
 @media (max-width: 1080px) {
@@ -49,4 +57,10 @@ nav {
 	    padding: .5em 1.4vmax;
 	}
     }
+}
+
+// Content.
+
+header {
+    background-color: $color-light-bg;
 }
