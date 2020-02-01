@@ -1,7 +1,6 @@
 baseURL = "https://detours.sbrk.org/"
 languageCode = "en-us"
 title = "Détours by Sébastien Rannou"
-theme = "ran"
 
 # Menu.
 sectionPagesMenu = "navigation"
