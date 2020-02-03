@@ -1,5 +1,3 @@
-// Ran.
-//
 // A theme inspired by Curtana.
 //
 // This is a light-ish version adapted for my needs, it doesn't
@@ -66,6 +64,27 @@ a {
 
 a:hover {
     color: $color-text-hl;
+}
+
+h1 {
+    line-height: 1.1;
+    font-size: 300%;
+    font-weight: 700;
+    letter-spacing: -.038em;
+}
+
+small {
+    font-size: smaller;
+}
+
+article {
+    header {
+	padding: 10vmin 0 10vmin 0;
+	margin: 0 0 16vmin 0;
+    }
+
+    #content {
+    }
 }
 
 // Navigation.
