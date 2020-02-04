@@ -17,8 +17,15 @@
 }
 
 :root {
-    --font-size: 1.6vw;
-    --side-padding: calc(var(--space) * 0.8);
+    --font-size: 1.4vw;
+    --side-padding: calc(var(--space) * 1.1);
+}
+
+@media (max-width: 1600px) {
+    :root {
+	--font-size: 1.6vw;
+	--side-padding: calc(var(--space) * 0.8);
+    }
 }
 
 @media (max-width: 1080px) {
@@ -53,7 +60,6 @@ body {
     line-height: 1.5;
     background-color: var(--color-dark-bg);
     color: var(--color-text);
-    padding: 0 var(--side-padding) 0 var(--side-padding);
 }
 
 a {
@@ -78,7 +84,7 @@ small {
 
 // Navigation.
 nav {
-    padding: 0.75vmax 0 0.75vmax 0;
+    padding: 0.75vmax var(--side-padding) 0.75vmax var(--side-padding);
 
     ul {
 	li {
@@ -99,8 +105,16 @@ nav {
 // Content.
 article {
     header {
-	padding: 10vmin 0 10vmin 0;
-	margin: 0 calc(- var(--space)) 16vmin calc(- var(--space));
+	padding: 15vmin var(--side-padding) 15vmin var(--side-padding);
+	margin: 0 calc(var(--side-padding) * -1.0) 16vmin calc(- var(--space));
 	background-color: var(--color-light-bg);
     }
+
+    #content {
+	padding: 0 var(--side-padding) 0 var(--side-padding);
+    }
+}
+
+footer {
+    padding: 0 var(--side-padding) 0 var(--side-padding);
 }
