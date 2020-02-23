@@ -76,6 +76,7 @@ h1 {
     font-size: 300%;
     font-weight: 700;
     letter-spacing: -.038em;
+    margin: 2vmin 0 2vmin 0;
 }
 
 small {
@@ -105,9 +106,10 @@ nav {
 // Content.
 article {
     header {
-	padding: 18vmin var(--side-padding) 18vmin var(--side-padding);
+	padding: 10vmin var(--side-padding) 10vmin var(--side-padding);
 	margin: 0 calc(var(--side-padding) * -1.0) 16vmin calc(- var(--space));
 	background-color: var(--color-light-bg);
+	font-size: 130%;
     }
 
     #content {
