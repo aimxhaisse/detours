@@ -37,14 +37,14 @@
 
 @media (max-width: 640px) {
     :root {
-	--font-size: 3.80vw;
+	--font-size: 3.20vw;
 	--side-padding: calc(var(--space) * 0.3);
     }
 }
 
 @media (max-width: 400px) {
     :root {
-	--font-size: 5.10vw;
+	--font-size: 3.50vw;
 	--side-padding: calc(var(--space) * 0.15);
     }
 }
@@ -106,10 +106,15 @@ nav {
 // Content.
 article {
     header {
+	h1 {
+	    text-align: left;
+	}
 	padding: 10vmin var(--side-padding) 10vmin var(--side-padding);
 	margin: 0 0 8vmin 0;
 	background-color: var(--color-light-bg);
 	font-size: 130%;
+
+	text-align: right;
     }
 
     #content {

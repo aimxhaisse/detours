@@ -1,11 +1,12 @@
 {{ define "main" }}
 <article lang="en">
   <header>
-    <h1>Détours</h1> 
+    <h1>Détours</h1>
+    <img src="/img/header.jpg" />
     <small>Photographic errands by Sébastien Rannou</small>
   </header>
   <div id="content">
-    <h2>Détours</h2>
+    <h2>détours</h2>
     <ul>
       {{ range where $.Site.Pages "Params.detour" true }}
       <li><a href="{{ .URL }}">{{ .Title }}</a></li>
