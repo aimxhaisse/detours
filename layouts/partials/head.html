@@ -7,4 +7,24 @@
 
 <link rel="stylesheet" href="{{ $styles.Permalink }}">
 
+{{- $js := resources.Get "js/lightense.js" | resources.Minify }}
+
+<script type="text/javascript" src="{{ $js.Permalink }}"></script>
+
+<script>
+  window.addEventListener('load', function () {
+      var config = {
+	  time: 300,
+	  padding: 40,
+	  offset: 40,
+	  keyboard: true,
+	  cubicBezier: '',
+	  background: 'rgba(0, 0, 0, .98)',
+	  zIndex: 1000000,
+      };
+
+      Lightense('img', config);
+  }, false);
+</script>
+
 <title>Détours</title>
