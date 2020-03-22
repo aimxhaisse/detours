@@ -7,24 +7,12 @@
 
 <link rel="stylesheet" href="{{ $styles.Permalink }}">
 
-{{- $js := resources.Get "js/lightense.js" | resources.Minify }}
+{{- $lightense := resources.Get "js/lightense.js" | resources.Minify }}
+{{- $jquery := resources.Get "js/jquery-3.4.1.js" | resources.Minify }}
+{{- $main := resources.Get "js/main.js" | resources.Minify }}
 
-<script type="text/javascript" src="{{ $js.Permalink }}"></script>
-
-<script>
-  window.addEventListener('load', function () {
-      var config = {
-	  time: 300,
-	  padding: 40,
-	  offset: 40,
-	  keyboard: true,
-	  cubicBezier: '',
-	  background: 'rgba(0, 0, 0, .98)',
-	  zIndex: 1000000,
-      };
-
-      Lightense('img', config);
-  }, false);
-</script>
+<script type="text/javascript" src="{{ $lightense.Permalink }}"></script>
+<script type="text/javascript" src="{{ $jquery.Permalink }}"></script>
+<script type="text/javascript" src="{{ $main.Permalink }}"></script>
 
 <title>Détours</title>
