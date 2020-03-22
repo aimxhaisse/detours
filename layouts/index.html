@@ -9,7 +9,7 @@
     <h2>détours</h2>
     <ul>
       {{ range where $.Site.Pages "Params.detour" true }}
-      <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
       {{ end }}
     </ul>
   </div>

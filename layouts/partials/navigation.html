@@ -3,7 +3,7 @@
     {{ $currentPage := . }}
     {{ range .Site.Menus.navigation }}
     <li>
-      <a class="{{ if (eq $currentPage.URL .URL) }}active{{ end }}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      <a class="{{ if (eq $currentPage.RelPermalink .URL) }}active{{ end }}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
     </li>
     {{ end }}
   </ul>
