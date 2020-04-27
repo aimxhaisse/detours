@@ -12,7 +12,7 @@
     --color-text: #ffe7e5;
     --color-text-hl: #ff4238;
 
-    --font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI", sans-serif;
+    --font-family: "Helvetica Neue", "Segoe UI", sans-serif;
     --space: 24vw;
 }
 
@@ -60,6 +60,10 @@ body {
     line-height: 1.5;
     background-color: var(--color-dark-bg);
     color: var(--color-text);
+}
+
+p.dark {
+    color: var(--color-text);opacity: 0.4;
 }
 
 a {
