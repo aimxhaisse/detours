@@ -71,6 +71,14 @@ p.dark {
     color: var(--color-text);opacity: 0.4;
 }
 
+p.near-dark {
+    color: var(--color-text);opacity: 0.6;
+}
+
+p.huge {
+    font-size: 400%;
+}
+
 a {
     text-decoration: none;
     color: var(--color-text);
