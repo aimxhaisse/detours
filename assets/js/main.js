@@ -12,12 +12,33 @@ $(document).ready(function () {
 	});
     };
 
+    var icon_reset = "var(--color-icon-reset)";
+    var icon_hl = "var(--color-icon-hl)";
+    var icon_on = "var(--color-icon-on)";
+
+    var highlightAudioIcon = function () {
+	$(".audio-play").hover(function () {
+	    var color = $(this).find("g").attr("fill");
+
+	    if (color == icon_reset) {
+		$(this).find("g").attr("fill", icon_hl);
+	    }
+	}, function () {
+	    var color = $(this).find("g").attr("fill");
+
+	    if (color == icon_hl) {
+		$(this).find("g").attr("fill", icon_reset);
+	    }
+	});
+    };
+
     // Audio player.
     //
     // - Each link with the "audio-play" class is a player,
     // - It wraps an audio SVG icon,
     // - Target link is the audio file to be played,
     // - Multiple players supported, they need to point to != targets.
+    //
     var setUpAudio = function () {
 	var audio_preload = {};
 
@@ -33,8 +54,10 @@ $(document).ready(function () {
 
 	    if (audio_preload[target].paused) {
 		audio_preload[target].play();
+		$(this).find("g").attr("fill", icon_on);
 	    } else {
 		audio_preload[target].pause();
+		$(this).find("g").attr("fill", icon_reset);
 	    }
 
 	    return false;
@@ -43,4 +66,5 @@ $(document).ready(function () {
 
     setUpLightense();
     setUpAudio();
+    highlightAudioIcon();
 });
