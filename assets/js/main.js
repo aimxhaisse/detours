@@ -1,7 +1,33 @@
 $(document).ready(function () {
+    var currentImage = false;
+
+    var setUpNavigation = function () {
+	var idx = 1;
+
+	$("img:not(no-lightense)").each(function () {
+	    $(this).attr("id", "detour-" + idx);
+	    idx += 1;
+	});
+
+	var moveToNextImage = function (next) {
+	    if ($(next).length) {
+		var offset = $(next).offset();
+		$("#content").scrollTop(offset.top);
+		$(next).trigger('click');
+	    }
+	};
+
+	$("body").keypress(function (e) {
+	    if (e.key == ' ' && currentImage != false) {
+		next = "#detour-" + (parseInt(currentImage.split("-")[1], 10) + 1);
+		$(currentImage).trigger('click');
+		setTimeout(function () { moveToNextImage(next); }, 350);
+	    }
+	});
+    };
 
     var setUpLightense = function () {
-	Lightense('img:not(.no-lightense)', {
+	return Lightense('img:not(.no-lightense)', {
 	    time: 300,
 	    padding: 40,
 	    offset: 40,
@@ -9,6 +35,12 @@ $(document).ready(function () {
 	    cubicBezier: '',
 	    background: 'rgba(0, 0, 0, .98)',
 	    zIndex: 1000000,
+	    afterShow: function (config) {
+		currentImage = $(config.target).attr("id");
+	    },
+	    afterHide: function (config) {
+		currentImage = false;
+	    }
 	});
     };
 
@@ -16,7 +48,7 @@ $(document).ready(function () {
     var icon_hl = "var(--color-icon-hl)";
     var icon_on = "var(--color-icon-on)";
 
-    var highlightAudioIcon = function () {
+    var setUpHighlightAudioIcon = function () {
 	$(".audio-play").hover(function () {
 	    var color = $(this).find("g").attr("fill");
 
@@ -65,6 +97,7 @@ $(document).ready(function () {
     };
 
     setUpLightense();
+    setUpNavigation();
     setUpAudio();
-    highlightAudioIcon();
+    setUpHighlightAudioIcon();
 });
