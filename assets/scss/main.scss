@@ -22,14 +22,14 @@
 }
 
 :root {
-    --font-size: 0.9vw;
-    --side-padding: calc(var(--space) * 1.4);
+    --font-size: 1.1vw;
+    --side-padding: calc(var(--space) * 1.2);
 }
 
 @media (max-width: 1600px) {
     :root {
 	--font-size: 1.6vw;
-	--side-padding: calc(var(--space) * 0.8);
+	--side-padding: calc(var(--space) * 1.1);
     }
 }
 
