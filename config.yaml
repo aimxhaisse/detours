@@ -19,8 +19,13 @@ menu:
       title: "Exhibitions"
       url: /exhibitions/
       weight: 2
+    - identifier: "photobooks"
+      name: "Photobooks"
+      title: "Photobooks"
+      url: /photobooks/
+      weight: 3
     - identifier: "about"
       name: "About"
       title: "About"
       url: /about/
-      weight: 3
+      weight: 4
