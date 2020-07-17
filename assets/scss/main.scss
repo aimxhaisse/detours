@@ -42,7 +42,7 @@
 
 @media (max-width: 640px) {
     :root {
-	--font-size: 3.20vw;
+	--font-size: 2.80vw;
 	--side-padding: calc(var(--space) * 0.3);
     }
 }
@@ -91,6 +91,12 @@ a {
 
 a:hover {
     color: var(--color-text-hl);
+}
+
+div.small-image-right {
+    float: right;
+    width: 45%;
+    margin: calc(var(--font-size) * 0.25);
 }
 
 h1 {
