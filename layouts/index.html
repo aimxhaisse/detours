@@ -6,9 +6,9 @@
     <small>Photographic errands by Sébastien Rannou</small>
   </header>
   <div id="content">
-    <h2>détours</h2>
+    <h2>Détours</h2>
     <ul>
-      {{ range where $.Site.Pages "Params.detour" true }}
+      {{ range where $.Site.Pages.ByWeight.Reverse "Params.detour" true }}
       <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
       {{ end }}
     </ul>
