@@ -14,3 +14,10 @@ A static website for photographic errands.
 
 This is highly customized for my use, but can be forked & adapted
 provided some knownledge of Hugo.
+
+## Images
+
+Ideal export settings:
+
+- 1100px on the long side
+- jpeg quality 80
