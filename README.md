@@ -19,5 +19,5 @@ provided some knownledge of Hugo.
 
 Ideal export settings:
 
-- 1100px on the long side
+- 1600px on the long side
 - jpeg quality 80
