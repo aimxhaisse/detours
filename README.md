@@ -2,7 +2,7 @@
 
 A static website for photographic errands.
 
-[Détours](https://github.com/aimxhaisse/detours/raw/master/static/img/https://github.com/aimxhaisse/detours/blob/master/static/img/header.jpg "Madrid")
+![Détours](https://raw.githubusercontent.com/aimxhaisse/detours/master/static/img/header.jpg "Madrid")
 
 ## Features
 
