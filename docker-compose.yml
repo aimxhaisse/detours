@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  mxs_frontend:
+  detours_frontend:
     environment:
       - VIRTUALHOST=detours.sbrk.org
     build: ./
