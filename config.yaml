@@ -22,7 +22,7 @@ menu:
     - identifier: "photobooks"
       name: "Photobooks"
       title: "Photobooks"
-      url: /photobooks/
+      url: /books/
       weight: 3
     - identifier: "about"
       name: "About"
