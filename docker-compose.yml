@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  mxs_frontend:
+    environment:
+      - VIRTUALHOST=detours.sbrk.org
+    build: ./
+    ports:
+    - "10005:80"
