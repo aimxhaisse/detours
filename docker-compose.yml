@@ -6,3 +6,4 @@ services:
     build: ./
     ports:
     - "10005:80"
+    restart: unless-stopped
